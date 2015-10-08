@@ -40,7 +40,7 @@ googleyoutube.prototype.getToken = function(code){
 
 googleyoutube.prototype.isTokenExists = function(){	
 	if(utility.fileExists(filepath)){		
-		var token = this.fetchTokenFromFile();		
+		var tokens = this.fetchTokenFromFile();		
 		if(!_.isUndefined(tokens.access_token) && !_.isEmpty(tokens.access_token)){
 			return true;
 		}
